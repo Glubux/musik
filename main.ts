@@ -1,6 +1,7 @@
 let song = 0
-let play = 0
 music.stopAllSounds()
+let play = 0
+play = 0
 basic.showString("Wilkommen")
 basic.forever(function () {
     if (play == 0 && (input.buttonIsPressed(Button.A) || input.buttonIsPressed(Button.B))) {
