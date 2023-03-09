@@ -2,13 +2,13 @@ let song = 0
 music.stopAllSounds()
 let play = 0
 play = 0
-let animation_x = 0
-let animation_y = 0
-for (let index = 0; index < 4; index++) {
-    animation_x += 1
-    animation_y += 1
-    led.plotBrightness(animation_x, animation_y, 255)
-}
+basic.showLeds(`
+    . # # # .
+    # . # . #
+    # . # . #
+    # . # . #
+    . # # # .
+    `)
 basic.forever(function () {
     if (play == 0 && (input.buttonIsPressed(Button.A) || input.buttonIsPressed(Button.B))) {
         if (input.buttonIsPressed(Button.A)) {
@@ -253,109 +253,8 @@ basic.forever(function () {
                 music.setTempo(50)
             }
         }
-        // Mazel Tov
-        if (song == 3) {
-            music.setTempo(25)
-            music.playTone(349, music.beat(BeatFraction.Eighth))
-            music.changeTempoBy(5)
-            music.playTone(466, music.beat(BeatFraction.Eighth))
-            music.changeTempoBy(5)
-            music.playTone(587, music.beat(BeatFraction.Eighth))
-            music.changeTempoBy(10)
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(659, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(587, music.beat(BeatFraction.Eighth))
-            music.playTone(523, music.beat(BeatFraction.Eighth))
-            music.playTone(466, music.beat(BeatFraction.Quarter))
-            music.playTone(466, music.beat(BeatFraction.Eighth))
-            music.changeTempoBy(10)
-            music.playTone(349, music.beat(BeatFraction.Eighth))
-            music.playTone(466, music.beat(BeatFraction.Eighth))
-            music.playTone(587, music.beat(BeatFraction.Eighth))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(659, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(784, music.beat(BeatFraction.Eighth))
-            music.playTone(831, music.beat(BeatFraction.Eighth))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Eighth))
-            music.playTone(698, music.beat(BeatFraction.Eighth))
-            music.playTone(784, music.beat(BeatFraction.Eighth))
-            music.playTone(784, music.beat(BeatFraction.Eighth))
-            music.playTone(932, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(659, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(587, music.beat(BeatFraction.Eighth))
-            music.playTone(523, music.beat(BeatFraction.Eighth))
-            music.playTone(466, music.beat(BeatFraction.Quarter))
-            music.playTone(466, music.beat(BeatFraction.Eighth))
-            music.playTone(392, music.beat(BeatFraction.Eighth))
-            music.playTone(415, music.beat(BeatFraction.Eighth))
-            music.playTone(466, music.beat(BeatFraction.Eighth))
-            music.playTone(523, music.beat(BeatFraction.Quarter))
-            music.playTone(523, music.beat(BeatFraction.Eighth))
-            music.playTone(622, music.beat(BeatFraction.Eighth))
-            music.playTone(587, music.beat(BeatFraction.Eighth))
-            music.playTone(523, music.beat(BeatFraction.Eighth))
-            music.playTone(466, music.beat(BeatFraction.Eighth))
-            music.playTone(415, music.beat(BeatFraction.Eighth))
-            music.playTone(392, music.beat(BeatFraction.Half))
-            music.rest(music.beat(BeatFraction.Eighth))
-            music.changeTempoBy(30)
-            music.playTone(349, music.beat(BeatFraction.Eighth))
-            music.playTone(466, music.beat(BeatFraction.Eighth))
-            music.playTone(587, music.beat(BeatFraction.Eighth))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(659, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(587, music.beat(BeatFraction.Eighth))
-            music.playTone(523, music.beat(BeatFraction.Eighth))
-            music.playTone(466, music.beat(BeatFraction.Quarter))
-            music.playTone(466, music.beat(BeatFraction.Eighth))
-            music.changeTempoBy(10)
-            music.playTone(349, music.beat(BeatFraction.Eighth))
-            music.playTone(466, music.beat(BeatFraction.Eighth))
-            music.playTone(587, music.beat(BeatFraction.Eighth))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(659, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(784, music.beat(BeatFraction.Eighth))
-            music.playTone(831, music.beat(BeatFraction.Eighth))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Eighth))
-            music.playTone(698, music.beat(BeatFraction.Eighth))
-            music.playTone(784, music.beat(BeatFraction.Eighth))
-            music.playTone(784, music.beat(BeatFraction.Eighth))
-            music.playTone(932, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(659, music.beat(BeatFraction.Quarter))
-            music.playTone(698, music.beat(BeatFraction.Quarter))
-            music.playTone(587, music.beat(BeatFraction.Eighth))
-            music.playTone(523, music.beat(BeatFraction.Eighth))
-            music.playTone(466, music.beat(BeatFraction.Quarter))
-            music.playTone(466, music.beat(BeatFraction.Eighth))
-            music.playTone(392, music.beat(BeatFraction.Eighth))
-            music.playTone(415, music.beat(BeatFraction.Eighth))
-            music.playTone(466, music.beat(BeatFraction.Eighth))
-            music.playTone(523, music.beat(BeatFraction.Quarter))
-            music.playTone(523, music.beat(BeatFraction.Eighth))
-            music.playTone(622, music.beat(BeatFraction.Eighth))
-            music.playTone(587, music.beat(BeatFraction.Eighth))
-            music.playTone(523, music.beat(BeatFraction.Eighth))
-            music.playTone(466, music.beat(BeatFraction.Eighth))
-            music.playTone(415, music.beat(BeatFraction.Eighth))
-            music.playTone(392, music.beat(BeatFraction.Half))
-            music.playTone(392, music.beat(BeatFraction.Quarter))
-            music.playTone(784, music.beat(BeatFraction.Quarter))
-        }
         // Rick Roll
-        if (song == 4) {
+        if (song == 3) {
             music.setTempo(30)
             music.playTone(415, music.beat(BeatFraction.Sixteenth))
             music.playTone(466, music.beat(BeatFraction.Sixteenth))
@@ -429,7 +328,7 @@ basic.forever(function () {
             music.playTone(554, music.beat(BeatFraction.Half))
         }
         // Wallerman
-        if (song == 5) {
+        if (song == 4) {
             music.setTempo(30)
             music.playTone(392, music.beat(BeatFraction.Eighth))
             music.playTone(262, music.beat(BeatFraction.Eighth))
@@ -570,30 +469,6 @@ basic.forever(function () {
             music.playTone(294, music.beat(BeatFraction.Eighth))
             music.playTone(262, music.beat(BeatFraction.Quarter))
             music.playTone(262, music.beat(BeatFraction.Quarter))
-        }
-    }
-})
-basic.forever(function () {
-    if (play == 1) {
-        if (song == 1) {
-            basic.showString("Harry Potter")
-            basic.pause(100)
-        }
-        if (song == 2) {
-            basic.showString("Tetris")
-            basic.pause(100)
-        }
-        if (song == 3) {
-            basic.showString("Mazel Tov")
-            basic.pause(100)
-        }
-        if (song == 4) {
-            basic.showString("Rick Roll")
-            basic.pause(100)
-        }
-        if (song == 5) {
-            basic.showString("Wallerman")
-            basic.pause(100)
         }
     }
 })
